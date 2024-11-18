@@ -1,0 +1,33 @@
+Window Handle Mechanism
+
+* Opening Another Tab is same as window as it is new one from current page
+* Scope of a run is always in the first URL opened
+* Us Switch Command to switch to Another window or Tab ( which is called Child window)
+* After closing the child or new tab, We have to switch to the main window via command.
+* driver.windowhandles() will get the name of all the windows in a List and return it
+
+
+# Iframes
+1. Dev can inform that the element is in Iframe
+2. Inspect the HTML element and then check if it is iframe
+3. To switch to these frames we need to use switch commands
+
+# Events need Javascript to load and we need the same to automate them
+
+* using Javascript we can do the same like manipulate
+* For this we need to execute the Javascript on Browser data
+* To check Goto Dev>Console > window. then you can see all the applicable methods to Actions
+Ex: window.scrollBy(0,document.body.scrollHeight) -- > moves the webpage to the bottom of the page
+command : driver.execute_script("window.scrollBy(0,document.body.scrollHeight);")
+
+# Head less Mode - The broswer will run in backend without any UI on the screen
+
+---- Options ----------
+Headless is one of the example for this.
+1. For this we need to create options before invoking a browser by creating an object for browser options
+2. For that After browser options are created that need to be passed on as argument ot the service object
+3. If we are testing any internal website we can use , Ignore certificate errors as an argument while invoking the browser
+ex: --ignore-certificate-error
+4. We can invoke particular user with browser command in options
+
+
